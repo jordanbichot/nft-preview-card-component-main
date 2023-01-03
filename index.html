@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | NFT preview card component</title>
+  </head>
+
+  <body>
+    <main>
+      <article class="card">
+        <picture class="screen-image">
+          <img class="image special-hover" src="images/image-equilibrium.jpg" />
+        </picture>
+        <div class="flex-container">
+          <h1 class="main-text white-text hover-ability">Equilibrium #3429</h1>
+          <p class="simple-text text soft-blue-text">
+            Our Equilibrium collection promotes balance and calm.
+          </p>
+          <div class="flex-band">
+            <p class="eth-icon-text" data-icon="eth-symbol">0.041 ETH</p>
+            <p class="clock-icon-text soft-blue-text" data-icon="little-clock">
+              3 days left
+            </p>
+          </div>
+          <hr class="division-line" />
+          <div class="about-the-author soft-blue-text">
+            <img class="avatar-image" src="images/image-avatar.png" />
+            <p>
+              Creation of
+              <span class="white-text hover-ability">Jules Wyvern</span>
+            </p>
+          </div>
+        </div>
+      </article>
+    </main>
+  </body>
+</html>
