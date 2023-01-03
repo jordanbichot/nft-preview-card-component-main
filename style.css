@@ -91,12 +91,12 @@ body {
   place-content: center;
 
   font-family: var(--font-family-Outfit);
-  font-size: 18px;
+  font-size: 1rem;
 }
 
 .card {
   background-color: var(--color-neutral-very-dark-blue-card);
-  max-width: 350px;
+  max-width: 340px;
   max-height: 600px;
   margin: 1.25rem;
   padding: 1.25rem;
@@ -114,7 +114,7 @@ body {
   background-image: url(images/icon-view.svg);
   background-position: center;
   background-repeat: no-repeat;
-  border-radius: 0.51rem;
+  border-radius: 0.55rem;
 }
 
 .flex-container {
