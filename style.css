@@ -1,40 +1,23 @@
-/*
-1. Use a more-intuitive box-sizing model.
-*/
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
-/*
-2. Remove default margin
-*/
 * {
   margin: 0;
 }
 
-/*
-3. Allow percentage-based heights in the application
-*/
 html,
 body {
   height: 100%;
 }
 
-/*
-Typographic tweaks!
-4. Add accessible line-height
-5. Improve text rendering
-*/
 body {
   line-height: 1.2;
   -webkit-font-smoothing: antialiased;
 }
 
-/*
-6. Improve media defaults
-*/
 img,
 picture,
 video,
@@ -44,9 +27,6 @@ svg {
   max-width: 100%;
 }
 
-/*
-7. Remove built-in form typography styles
-*/
 input,
 button,
 textarea,
@@ -54,9 +34,6 @@ select {
   font: inherit;
 }
 
-/*
-8. Avoid text overflows
-*/
 p,
 h1,
 h2,
@@ -66,6 +43,7 @@ h5,
 h6 {
   overflow-wrap: break-word;
 }
+/* END - Reset CSS */
 
 :root {
   --color-primary-soft-blue: hsl(215, 51%, 70%);
@@ -103,18 +81,32 @@ body {
   border-radius: 0.8rem;
 }
 
+.picture {
+  position: relative;
+}
+
 .image {
+  position: relative;
   border-radius: 0.5rem;
 }
-.screen-image {
-  display: inline-flex;
-  height: 300px;
-  width: 300px;
+
+.active-state-view {
+  position: absolute;
+  top: 0;
+  height: 290px;
+  width: 290px;
   background-color: var(--color-primary-cyan);
   background-image: url(images/icon-view.svg);
   background-position: center;
   background-repeat: no-repeat;
-  border-radius: 0.55rem;
+  border-radius: 0.5rem;
+  transition: 0.5s ease;
+  opacity: 0;
+}
+
+.special-hover:is(:hover, :focus) {
+  opacity: 0.6;
+  cursor: pointer;
 }
 
 .flex-container {
@@ -129,19 +121,10 @@ body {
   font-weight: var(--font-weigth-bold);
 }
 
-.hover-ability:is(:hover, :focus) {
-  color: var(--color-primary-cyan);
-  cursor: pointer;
-}
-
-.special-hover:is(:hover, :focus) {
-  opacity: 0.5;
-  cursor: pointer;
-}
-
 .simple-text {
   font-weight: var(--font-weigth-ligth);
 }
+
 .flex-band {
   display: flex;
   justify-content: space-between;
@@ -171,12 +154,9 @@ body {
   font-weight: var(--font-weigth-regular);
 }
 
-.soft-blue-text {
-  color: var(--color-primary-soft-blue);
-}
-
-.white-text {
-  color: var(--color-neutral-white);
+.hover-ability:is(:hover, :focus) {
+  color: var(--color-primary-cyan);
+  cursor: pointer;
 }
 
 .avatar-image {
@@ -191,6 +171,7 @@ body {
 
 .eth-icon-text[data-icon="eth-symbol"]::before {
   content: "";
+  align-self: center;
   background-image: url(images/icon-ethereum.svg);
   width: 11px;
   height: 18px;
@@ -199,8 +180,17 @@ body {
 
 .clock-icon-text[data-icon="little-clock"]::before {
   content: "";
+  align-self: center;
   background-image: url(images/icon-clock.svg);
   width: 17px;
   height: 17px;
   margin-right: 5px;
+}
+
+.soft-blue-text {
+  color: var(--color-primary-soft-blue);
+}
+
+.white-text {
+  color: var(--color-neutral-white);
 }
